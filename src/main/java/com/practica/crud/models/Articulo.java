@@ -11,6 +11,7 @@ public class Articulo {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long idCliente;
     private String nombre;
     private String color;
 
@@ -19,8 +20,9 @@ public class Articulo {
 
     }
 
-    public Articulo(Long id, String nombre, String color) {
+    public Articulo(Long id, Long idCliente, String nombre, String color) {
         this.id = id;
+        this.idCliente = idCliente;
         this.nombre = nombre;
         this.color = color;
     }
@@ -33,6 +35,14 @@ public class Articulo {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(Long idCliente) {
+        this.idCliente = idCliente;
     }
 
     public String getNombre() {
